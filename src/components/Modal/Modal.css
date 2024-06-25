@@ -1,0 +1,72 @@
+/* src/components/UserModal.css */
+
+/* Modal Header */
+.modal-header {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: #fff; /* Text color */
+    border-bottom: none; /* Remove default bottom border */
+  }
+  
+  /* Modal Title */
+  .modal-title {
+    font-size: 1.5rem; /* Larger font size for title */
+  }
+  
+  /* Modal Body */
+  .modal-body {
+    padding: 1.5rem; /* Padding around the body content */
+  }
+  
+  /* Card Styles for User Details */
+  .card {
+    border: none; /* Remove card borders */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow effect */
+  }
+  
+  .card-body {
+    padding: 1rem; /* Padding inside the card body */
+  }
+  
+  .card-title {
+    font-size: 1.25rem; /* Larger font size for title */
+    margin-bottom: 0.5rem; /* Optional: Adjust spacing */
+  }
+  
+  .card-subtitle {
+    color: #6c757d; /* Bootstrap muted color */
+    font-size: 0.875rem; /* Smaller font size */
+    margin-bottom: 0.5rem; /* Optional: Adjust spacing */
+  }
+  
+  .card-text {
+    margin-bottom: 0.25rem; /* Optional: Adjust spacing */
+  }
+  
+  .card-text strong {
+    font-weight: bold; /* Bold text for strong emphasis */
+  }
+  
+  .card-link {
+    color: #007bff; /* Bootstrap primary color for links */
+    text-decoration: none; /* Remove default underline */
+  }
+  
+  .card-link:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  /* Modal Footer */
+  .modal-footer {
+    justify-content: center; /* Center align buttons in footer */
+  }
+  
+  /* Close Button */
+  .modal-footer .btn-secondary {
+    background-color: #6c757d; /* Bootstrap secondary color */
+    border: none; /* Remove button border */
+  }
+  
+  .modal-footer .btn-secondary:hover {
+    background-color: #5a6268; /* Darken background on hover */
+  }
+  

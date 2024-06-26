@@ -108,7 +108,7 @@ const TableComponent = ({
       </Table>
       </Col>
       </Row>
-      <Pagination totalPages={5} currentPage={1} rowsPerPage={5} />
+      <Pagination totalPages={5} currentPage={1} rowsPerPage={5} onPageChange={helperFunc.onPageChange} onRowsPerPageChange={helperFunc.onRowsPerPageChange} />
     </Container>
   );
 };

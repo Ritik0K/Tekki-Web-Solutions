@@ -17,7 +17,7 @@ const Pagination = ({ totalPages=5, currentPage=1, onPageChange, rowsPerPage=5, 
         <select id="rowsPerPage" value={rowsPerPage} onChange={handleRowsPerPageChange}>
             {numberOfRows.map(e=>{
                 return (
-                    <option value={e}>{e}</option>
+                    <option key={e} value={e}>{e}</option>
                 )
             })}
         </select>

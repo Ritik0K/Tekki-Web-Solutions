@@ -1,5 +1,5 @@
 import React from 'react'
-import CustomModal from '../../components/Modal/Modal'
+import CustomModal from '../../../components/Modal/Modal'
 import { Card } from 'react-bootstrap'
 
 const UserModal = ({user, show, onHide}) => {

@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import {  Container } from "react-bootstrap";
-import TableComponent from "../../components/TableComponent/TableComponent";
 import tableConfig from "./constants";
 import useUsers from "../../hooks/usersHook";
-import UserModal from "./UserModal";
+import UserModal from "./components/UserModal";
+import UserList from "./components/UserList";
 
 const HomePage = () => {
-  const [users, loading, error] = useUsers();
-
+  
   const [pagination, setPagination] = useState({
-    rowPerPage: 5,
+    rowsPerPage: 5,
     currentPage: 1,
   });
-
+  const [users, loading, error, totalPages] = useUsers({pagination});
+  
   const [tableModal, setTableModal] = useState({
     curRow: null,
     show: false,
@@ -25,21 +25,23 @@ const HomePage = () => {
   const openModal = (row) => {
     setTableModal({ curRow: row, show: true });
   };
-  const onPageChange = () =>{
-
+  const onPageChange = (page) =>{
+    setPagination(prev=>({...prev, currentPage: page }))
   }
-  const onRowsPerPageChange = () =>{
-
+  const onRowsPerPageChange = (rowsPerPage) =>{
+    setPagination(prev=>({...prev, rowsPerPage : rowsPerPage }))
   }
+
+  const helperFunc ={ pagination, setPagination, openModal, onPageChange,onRowsPerPageChange, totalPages }
 
   return (
     <Container style={{marginTop : '14px'}}>
-      <TableComponent
+      <UserList
         loading={loading}
         error={error}
-        data={users}
+        users={users}
         tableConfig={tableConfig}
-        helperFunc={{ pagination, setPagination, openModal, onPageChange,  }}
+        helperFunc={helperFunc}
       />
 
     <UserModal user={tableModal.curRow} show={tableModal.show} onHide={handleHideModal} />

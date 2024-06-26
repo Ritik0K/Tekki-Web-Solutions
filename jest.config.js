@@ -5,5 +5,8 @@ export default {
     },
     moduleFileExtensions: ['js', 'jsx'],
     setupFilesAfterEnv: ['@testing-library/jest-dom'],
+    moduleNameMapper: {
+      '\\.(css|less|scss|sass)$': '<rootDir>/src/mocks/styleMock.js',
+    },
   };
   
